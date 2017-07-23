@@ -1,0 +1,57 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.navbar-sky{
+  background: #dbebf8
+}
+
+.sidebar {
+  background: #fcfcfc;/*背景色*/
+  padding: 0.5em 0.5em 0.5em 2em;/*ボックス内の余白*/
+  border: solid 3px gray;/*線の種類 太さ 色*/
+}
+
+.sidebar {
+  line-height: 1.5; /*文の行高*/
+  padding: 0.5em 0; /*前後の文との余白*/
+}
+
+
+.importantcolor{
+  background: #dbebf8
+}
+.page-top-btn {
+  display: none;
+  border-radius: 50px;
+  background: #336699;
+  width: 60px;
+  height: 60px;
+  transition: all 0.3s;
+  cursor: pointer;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 20;
+  a {
+    display: block;
+    color: white;
+    line-height: 60px;
+    text-decoration: none;
+  }
+  &:hover {
+  opacity: 0.7;
+  }
+}
