@@ -1,10 +1,39 @@
-Rails.application.routes.draw do
+  Rails.application.routes.draw do
 
-  resources :topics
-  resources :studies
-  resources :carriers
   root 'top#index'
-  resources :blogs, only: [:index, :new, :create, :edit, :update,:destroy]
+
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  devise_for :users, controllers: {
+    registrations: "users/registrations",
+    omniauth_callbacks: "users/omniauth_callbacks"
+}
+  resources :topics do
+    collection do
+      get 'admin'
+    end
+    resources :comments
+  end
+
+  resources :carriers do
+    collection do
+      get 'admin'
+    end
+  end
+    resources :studies do
+    collection do
+      get 'admin'
+    end
+  end
+
+  resources :blogs
+
+  resources :users, only: [:index]
+
+  resources :relationships, only: [:create,:destroy]
+
+  resources :conversations do
+    resources :messages
+  end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

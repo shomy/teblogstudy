@@ -1,18 +1,29 @@
 class TopicsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
 
+  def admin
+    @topics = Topic.all
+  end
   # GET /topics
   # GET /topics.json
   def index
     @topics = Topic.all
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   # GET /topics/1
   # GET /topics/1.json
   def show
+    @comment = @topic.comments.build
+    @comments = @topic.comments
   end
 
   # GET /topics/new
+
   def new
     @topic = Topic.new
   end
@@ -25,7 +36,7 @@ class TopicsController < ApplicationController
   # POST /topics.json
   def create
     @topic = Topic.new(topic_params)
-
+    @topic.user_id = current_user.id
     respond_to do |format|
       if @topic.save
         format.html { redirect_to @topic, notice: 'Topic was successfully created.' }

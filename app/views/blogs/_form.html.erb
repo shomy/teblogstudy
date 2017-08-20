@@ -1,3 +1,4 @@
+<% if current_user.admin == true %>
 <%= form_for(@blog) do |f| %>
   <% if @blog.errors.any? %>
     <div id="error_explanation">
@@ -21,3 +22,4 @@
 <% end %>
 
 <%= link_to "ブログ一覧画面にもどる", blogs_path %>
+<% end %>

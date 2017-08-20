@@ -15,12 +15,28 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'twitter-bootstrap-rails'
+gem 'bootstrap-sass'
+gem 'font-awesome-sass'
 gem 'jquery-turbolinks'
 gem 'rails_12factor', group: :production
+gem 'devise'
+gem 'rails_admin'
+gem 'cancan'
+gem 'pry-rails'
+gem 'better_errors'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem "font-awesome-rails"
+gem 'carrierwave'
+gem 'mini_magick'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'pry-rails'
+  gem 'better_errors'
+
 end
 
 group :development do
@@ -30,6 +46,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'dotenv-rails'
+  gem 'letter_opener_web'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

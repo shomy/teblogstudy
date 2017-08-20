@@ -1,0 +1,12 @@
+
+<h1>ブログ一覧</h1>
+
+<% @blogs.each do |blog| %>
+  <p>タイトル:<%= blog.title %></p>
+  <p>本文:<%= blog.content %></p>
+  <% if current_user.admin == true %>
+    <%= link_to "ブログを編集する", edit_blog_path(blog.id) %>
+    <%= link_to "ブログを削除する", blog_path(blog.id), method: :delete, data: { confirm: '本当に削除していいですか？'} %>
+    <%= link_to "ブログを作成する", new_blog_path %>
+  <% end %>
+<% end %>

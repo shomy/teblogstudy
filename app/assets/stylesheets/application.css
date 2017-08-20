@@ -12,7 +12,14 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
+th{
+  text-align: center;
+}
+td{
+  text-align: center;
+}
 
 .navbar-sky{
   background: #dbebf8
