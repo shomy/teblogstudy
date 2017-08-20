@@ -12,15 +12,16 @@
   <body>
 <%= render'layouts/navbar' %>
 <br>
-<br>
+
+    <%= yield %>
 <p class="flash"><%= notice %><%= alert %></p>
-<div class="container">
+<!-- <div class="container">
 <div class="col-md-3 importantcolor"><%= render'layouts/ex' %></div>
   <div class="col-md-9">
     <%= yield %>
   </div>
 </div>
-<div id="page-top-btn" class="page-top-btn">
+ --><div id="page-top-btn" class="page-top-btn">
     <p><a class="move-page-top" id="move-page-top">▲</a></p>
 </div>
   </body>

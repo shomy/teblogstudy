@@ -1,10 +1,43 @@
-<ul class="">
-  <li class="mappo">プログラミング勉強法について</li>
-    <li class="flex"><%= link_to @study.title, studies_path %></li>
-  <li class="mappo">技術 ブログ</li>
-    <li class="flex"><%= link_to @blog.title, blogs_path %></li>
-  <li class="mappo">エンジニア職での就業における見立て</li>
-    <li class="flex"><%= link_to @carrier.title, carriers_path %></li>
-  <li class="mappo">Topic</li>
-    <li class="flex"><%= link_to @topic.title, topics_path %></li>
-</ul>
+<section class="main-header">
+  <img src="">
+        <p>よちよち歩きで一歩ずつ進む<br><br>
+         プログラミング勉強の備忘録
+      </p>
+</section>
+
+<h1><%= notice %></h1>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <section class="about">
+      <h1>Tech Blog</h1>
+      <p>
+         このサイトはプログラミング勉強の備忘録です。<br>
+         使用目的<br>
+         (1)日頃の勉強の棚卸し<br>
+         (2)効率的な勉強法の記録と発信
+      </p>
+      <p>
+         推奨勉強方法<br>
+         Udemyで動画をみて、ウェブアプリケーションを２回作る。
+      </p>
+      </section>
+    </div>
+    <div class="col-md-6">
+    <br><br>
+      <ul class="">
+      <li class="mappo">プログラミング勉強法について</li>
+        <li class="flex"><%= link_to @study.title, studies_path %></li>
+      <li class="mappo">技術 ブログ</li>
+        <li class="flex"><%= link_to @blog.title, blogs_path %></li>
+      <li class="mappo">エンジニア職での就業における見立て</li>
+        <li class="flex"><%= link_to @carrier.title, carriers_path %></li>
+      <li class="mappo">Topic</li>
+        <li class="flex"><%= link_to @topic.title, topics_path %></li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+  </div>
+</div>
