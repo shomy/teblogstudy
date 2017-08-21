@@ -1,26 +1,14 @@
-
-<h1>Studies</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+    <p><%= notice %></p>
+    <h1>ブログ一覧 </h1>
     <% @studies.each do |study| %>
-      <tr>
-        <td><%= study.title %></td>
-        <td><%= study.content %></td>
-        <td><%= link_to 'Show', study %></td>
-      </tr>
+      <div class="row">
+        <!-- # ブログのタイトルにlink_toでリンクを設定します。 -->
+          <strong><%= markdown(study.title) %></strong>
+          <p><%= markdown(study.content) %></p><hr><hr>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
+</div>
 
-<br>
-
-<%= link_to 'New Study', new_study_path %>

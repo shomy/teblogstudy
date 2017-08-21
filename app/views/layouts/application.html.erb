@@ -6,23 +6,14 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
   </head>
-
   <body>
-<%= render'layouts/navbar' %>
-<br>
-
-    <%= yield %>
-<p class="flash"><%= notice %><%= alert %></p>
-<!-- <div class="container">
-<div class="col-md-3 importantcolor"><%= render'layouts/ex' %></div>
-  <div class="col-md-9">
-    <%= yield %>
-  </div>
-</div>
- --><div id="page-top-btn" class="page-top-btn">
-    <p><a class="move-page-top" id="move-page-top">▲</a></p>
-</div>
+    <%= render'layouts/navbar' %>
+      <br>
+      <%= yield %>
+      <p class="flash"><%= notice %><%= alert %></p>
+      <div id="page-top-btn" class="page-top-btn">
+        <p><a class="move-page-top" id="move-page-top">▲</a></p>
+      </div>
   </body>
 </html>

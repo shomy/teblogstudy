@@ -33,6 +33,7 @@ gem 'mini_magick'
 gem 'fog'
 gem 'dotenv-rails'
 gem 'unicorn'
+gem 'redcarpet'
 
 gem 'therubyracer', platforms: :ruby
 

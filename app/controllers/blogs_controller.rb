@@ -1,6 +1,10 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only:[:edit,:update,:destroy]
 
+  def admin
+    @blogs = Blog.all
+  end
+
   def index
     @blogs = Blog.all
   end

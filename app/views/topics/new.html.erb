@@ -1,4 +1,10 @@
-<h1>New Topic</h1>
+<div class="container">
+    <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+        <h2>New Topic投稿</h2>
+        <%= render 'form', topic: @topic %>
+        <%= link_to 'Back', topics_path %>
+    </div>
+</div>
 
-<%= render 'form', topic: @topic %>
-<%= link_to 'Back', topics_path %>
+
+

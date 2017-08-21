@@ -1,31 +1,16 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+    <p><%= notice %></p>
+      <h1>ブログ一覧</h1>
+        <% @studies.each do |study| %>
+        <p>タイトル:<%= markdown(study.title) %></p>
+        <p>本文:<%= markdown(study.content) %></p>
+        <% if current_user.admin == true %>
+          <%= link_to "ブログを編集する", edit_study_path(study.id) %>
+          <%= link_to "ブログを削除する", study_path(study.id), method: :delete, data: { confirm: '本当に削除していいですか？'} %>
+          <%= link_to "ブログを作成する", new_study_path %>
+        <% end %>
+      <% end %>
+  </div>
+</div>
 
-<h1>Studies</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% if current_user.admin == true %>
-    <% @studies.each do |study| %>
-      <tr>
-        <td><%= study.title %></td>
-        <td><%= study.content %></td>
-        <td><%= link_to 'Show', study %></td>
-        <td><%= link_to 'Edit', edit_study_path(study) %></td>
-        <td><%= link_to 'Destroy', study, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Study', new_study_path %>

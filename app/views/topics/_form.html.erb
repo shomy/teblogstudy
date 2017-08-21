@@ -12,17 +12,13 @@
     </div>
   <% end %>
 
-  <div class="field">
+
     <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
+    <%= f.text_field :title ,class:"form-control" %>
 
-  <div class="field">
     <%= f.label :content %>
-    <%= f.text_area :content %>
-  </div>
+    <%= f.text_area :content, :size=>"60x10",class:"form-control" %>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <%= f.submit '投稿',class:"form-control"%>
+
 <% end %>

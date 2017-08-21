@@ -1,26 +1,14 @@
-
-<h1>Carriers</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+    <p><%= notice %></p>
+    <h1>ブログ一覧 </h1>
     <% @carriers.each do |carrier| %>
-      <tr>
-        <td><%= carrier.title %></td>
-        <td><%= carrier.content %></td>
-        <td><%= link_to 'Show', carrier %></td>
-      </tr>
+      <div class="row">
+        <!-- # ブログのタイトルにlink_toでリンクを設定します。 -->
+          <strong><%= markdown(carrier.title) %></strong>
+          <p><%= markdown(carrier.content ) %></p><hr><hr>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
+</div>
 
-<br>
-
-<%= link_to 'New Carrier', new_carrier_path %>

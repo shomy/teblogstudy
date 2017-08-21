@@ -25,8 +25,11 @@
     end
   end
 
-  resources :blogs
-
+  resources :blogs do
+    collection do
+      get 'admin'
+    end
+  end
   resources :users, only: [:index]
 
   resources :relationships, only: [:create,:destroy]

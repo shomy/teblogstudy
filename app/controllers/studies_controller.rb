@@ -3,6 +3,10 @@ class StudiesController < ApplicationController
 
   # GET /studies
   # GET /studies.json
+  def admin
+    @studies = Study.all
+  end
+
   def index
     @studies = Study.all
   end

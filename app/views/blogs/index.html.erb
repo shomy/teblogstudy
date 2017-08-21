@@ -1,7 +1,15 @@
 
-<h1>ブログ一覧</h1>
 
-<% @blogs.each do |blog| %>
-  <p>タイトル:<%= blog.title %></p>
-  <p>本文:<%= blog.content %></p>
-<% end %>
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+    <p><%= notice %></p>
+    <h1>ブログ一覧 </h1>
+    <% @blogs.each do |blog| %>
+      <div class="row">
+        <!-- # ブログのタイトルにlink_toでリンクを設定します。 -->
+          <h4><strong><%= markdown(blog.title) %></strong></h4>
+          <p><%= markdown(blog.content) %></p><hr><hr>
+      </div>
+    <% end %>
+  </div>
+</div>
