@@ -1,4 +1,3 @@
-require 'redcarpet'
 module MarkdownHelper
   def markdown(text)
     unless @markdown
