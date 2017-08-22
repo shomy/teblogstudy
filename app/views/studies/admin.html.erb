@@ -3,8 +3,8 @@
     <p><%= notice %></p>
       <h1>ブログ一覧</h1>
         <% @studies.each do |study| %>
-        <p>タイトル:<%= markdown(study.title) %></p>
-        <p>本文:<%= markdown(study.content) %></p>
+        <p>タイトル:<%== markdown(study.title) %></p>
+        <p>本文:<%== markdown(study.content) %></p>
         <% if current_user.admin == true %>
           <%= link_to "ブログを編集する", edit_study_path(study.id) %>
           <%= link_to "ブログを削除する", study_path(study.id), method: :delete, data: { confirm: '本当に削除していいですか？'} %>

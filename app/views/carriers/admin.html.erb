@@ -3,8 +3,8 @@
     <p><%= notice %></p>
       <h1>ブログ一覧</h1>
       <% @carriers.each do |carrier| %>
-        <p>タイトル:<%= markdown(carrier.title) %></p>
-        <p>本文:<%= markdown(carrier.content) %></p>
+        <p>タイトル:<%== markdown(carrier.title) %></p>
+        <p>本文:<%== markdown(carrier.content) %></p>
         <% if current_user.admin == true %>
           <%= link_to "ブログを編集する", edit_carrier_path(carrier.id) %>
           <%= link_to "ブログを削除する", carrier_path(carrier.id), method: :delete, data: { confirm: '本当に削除していいですか？'} %>

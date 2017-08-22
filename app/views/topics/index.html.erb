@@ -23,9 +23,9 @@
       <tr>
         <td><%= profile_img(topic.user) %></td>
         <td><%= link_to topic_path(topic) do %>
-        <%= markdown(topic.title) %>
+        <%== markdown(topic.title) %>
         <% end %></td>
-        <td><%= markdown(topic.content) %></td>
+        <td><%== markdown(topic.content) %></td>
         <td><%= link_to "編集", edit_topic_path(topic.id), class: 'btn btn-default btn-sm' %></td>
         <td><%= link_to "削除", topic_path(topic.id), method: :delete, data: { confirm: '本当に削除していいですか？'}, class: 'btn btn-default btn-sm' %></td>
       </tr>
