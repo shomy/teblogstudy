@@ -1,3 +1,4 @@
+require 'redcarpet'
 module MarkdownHelper
   def markdown(text)
     unless @markdown
@@ -7,4 +8,4 @@ module MarkdownHelper
 
     @markdown.render(text).html_safe
   end
-end 
+end
