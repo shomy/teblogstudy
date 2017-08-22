@@ -5,6 +5,6 @@ module MarkdownHelper
       @markdown = Redcarpet::Markdown.new(renderer, autolink: true,fenced_code_blocks: true)
     end
 
-    @markdown.render(text).html_safe
+    @markdown.render(text)
   end
 end
