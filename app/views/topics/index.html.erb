@@ -26,8 +26,10 @@
         <%== markdown(topic.title) %>
         <% end %></td>
         <td><%== markdown(topic.content) %></td>
+        <% if current_user.id == topic.user_id %>
         <td><%= link_to "編集", edit_topic_path(topic.id), class: 'btn btn-default btn-sm' %></td>
         <td><%= link_to "削除", topic_path(topic.id), method: :delete, data: { confirm: '本当に削除していいですか？'}, class: 'btn btn-default btn-sm' %></td>
+        <%end%>
       </tr>
     <% end %>
   </tbody>
