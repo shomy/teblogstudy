@@ -7,7 +7,6 @@
     <% @blogs.each do |blog| %>
       <div class="row">
         <!-- # ブログのタイトルにlink_toでリンクを設定します。 -->
-          <h4><strong><%== markdown(blog.title) %></strong></h4>
           <p><%== markdown(blog.content) %></p><hr><hr>
       </div>
     <% end %>

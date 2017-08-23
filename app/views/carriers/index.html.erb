@@ -5,10 +5,8 @@
     <% @carriers.each do |carrier| %>
       <div class="row">
         <!-- # ブログのタイトルにlink_toでリンクを設定します。 -->
-          <strong><%== markdown(carrier.title) %></strong>
           <p><%== markdown(carrier.content ) %></p><hr><hr>
       </div>
     <% end %>
   </div>
 </div>
-

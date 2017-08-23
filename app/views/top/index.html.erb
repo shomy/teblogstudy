@@ -18,14 +18,15 @@
          (2)効率的な勉強法の記録と発信
       </p>
       <p>
-         推奨勉強方法<br>
+         
+         <br>
       </p>
       </section>
     </div>
     <div class="col-md-6">
     <br><br>
       <ul class="">
-      <li class="mappo">プログラミング勉強法について</li>
+      <li class="mappo">プログラミング勉強録</li>
         <li class="flex"><%= link_to @study.title, studies_path %></li>
       <li class="mappo">技術 ブログ</li>
         <li class="flex"><%= link_to @blog.title, blogs_path %></li>
@@ -36,6 +37,17 @@
       </ul>
     </div>
   </div>
+  <hr>
   <div class="row">
+    <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+      <p><%= notice %></p>
+      <h3>最新技術ブログ ３回分</h3>
+      <% @bl.each do |blog| %>
+        <div class="row">
+          <!-- # ブログのタイトルにlink_toでリンクを設定します。 -->
+            <p><%== markdown(blog.content) %></p><hr><hr>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>

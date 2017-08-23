@@ -5,7 +5,6 @@
     <% @studies.each do |study| %>
       <div class="row">
         <!-- # ブログのタイトルにlink_toでリンクを設定します。 -->
-          <strong><%== markdown(study.title) %></strong>
           <p><%== markdown(study.content) %></p><hr><hr>
       </div>
     <% end %>
