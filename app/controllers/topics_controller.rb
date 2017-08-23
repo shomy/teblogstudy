@@ -3,12 +3,12 @@ class TopicsController < ApplicationController
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
 
   def admin
-    @topics = Topic.all
+    @topics = Topic.all.order(id: :desc)
   end
   # GET /topics
   # GET /topics.json
   def index
-    @topics = Topic.all
+    @topics = Topic.all.order(id: :desc)
     respond_to do |format|
       format.html
       format.js

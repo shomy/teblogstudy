@@ -4,11 +4,11 @@ class StudiesController < ApplicationController
   # GET /studies
   # GET /studies.json
   def admin
-    @studies = Study.all
+    @studies = Study.all.order(id: :desc)
   end
 
   def index
-    @studies = Study.all
+    @studies = Study.all.order(id: :desc)
   end
 
   # GET /studies/1

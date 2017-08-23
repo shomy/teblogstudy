@@ -4,6 +4,6 @@ class TopController < ApplicationController
     @carrier = Carrier.last
     @study = Study.last
     @topic = Topic.last
-    @bl = Blog.last(3)
+    @bl = Blog.order(id: :desc).first(3)
   end
 end

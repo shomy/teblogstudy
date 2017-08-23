@@ -2,11 +2,11 @@ class BlogsController < ApplicationController
   before_action :set_blog, only:[:edit,:update,:destroy]
 
   def admin
-    @blogs = Blog.all
+    @blogs = Blog.all.order(id: :desc)
   end
 
   def index
-    @blogs = Blog.all
+    @blogs = Blog.all.order(id: :desc)
   end
 
   def new
