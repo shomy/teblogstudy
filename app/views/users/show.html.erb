@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h2><%= @user.name%></h2>
+      <%= profile_img(@user) %>
+       <h3>フォローしている人</h3>
+       <% @follwed.each do |f| %>
+        <%= render 'partial', f: f %>
+       <% end %>
+       <h3>フォローされている人</h3>
+       <% @followers.each do |f| %>
+        <%= render 'partial', f: f %>
+       <% end %>
+    </div>
+  </div>
+
