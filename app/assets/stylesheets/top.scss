@@ -9,7 +9,7 @@ header {
 }
 
 .main-header {
-  padding-bottom: 15%;
+  padding-bottom: 60%;
   width: 100%;
   background-size: cover;
   background-image: image-url("babya.png");
@@ -25,14 +25,13 @@ header {
 
 .main-header p {
   position: absolute;/*絶対配置*/
-  color: black;
+  color: #696969;
   font-weight: bold; /*太字に*/
   font-size: 1.9em;/*サイズ2倍*/
   font-family : 'Hiragino Mincho ProN';
   top: 90px;
   left: 70px;
   }
-// #696969
 
 .about {
   background-color: white;
