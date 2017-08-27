@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+    <p><%= notice %></p>
+    <h1>ブログ一覧 </h1>
+    <% @blogs.each do |blog| %>
+      <div class="row">
+        <!-- # ブログのタイトルにlink_toでリンクを設定します。 -->
+          <p><%== markdown(blog.content) %></p><hr><hr>
+      </div>
+    <% end %>
+  </div>
+</div>

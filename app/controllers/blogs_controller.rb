@@ -1,6 +1,9 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only:[:edit,:update,:destroy]
 
+
+
+
   def admin
     @blogs = Blog.all.order(id: :desc)
   end
@@ -8,6 +11,7 @@ class BlogsController < ApplicationController
   def index
     @blogs = Blog.all.order(id: :desc)
   end
+
 
   def new
     @blog = Blog.new
