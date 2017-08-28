@@ -9,6 +9,7 @@
                 <%= link_to user.name, user_path(user) %><br>
                 <%= link_to 'メッセージ', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post', class: "btn btn-large btn-success"%><br>
               <%= render partial: 'follow_form', locals: { user: user } if signed_in?   %>
+              </div>
             </li>
           <% end %>
       </div>
