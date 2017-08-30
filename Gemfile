@@ -34,6 +34,8 @@ gem 'fog'
 gem 'dotenv-rails'
 gem 'unicorn'
 gem 'redcarpet'
+gem 'faker'
+
 
 gem 'therubyracer', platforms: :ruby
 
