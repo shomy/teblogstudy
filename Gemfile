@@ -36,6 +36,7 @@ gem 'unicorn'
 gem 'redcarpet'
 gem 'faker'
 
+gem 'ransack'
 
 gem 'therubyracer', platforms: :ruby
 

@@ -10,6 +10,8 @@ class BlogsController < ApplicationController
 
   def index
     @blogs = Blog.all.order(id: :desc)
+    @q = Blog.ransack(params[:q])
+    @blogs = @q.result(distinct: true)
   end
 
 
@@ -44,7 +46,7 @@ class BlogsController < ApplicationController
 
   private
     def blogs_params
-      params.require(:blog).permit(:title, :content)
+      params.require(:blog).permit(:title, :content,:q)
     end
 
     def set_blog
