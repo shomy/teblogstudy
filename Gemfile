@@ -35,8 +35,8 @@ gem 'dotenv-rails'
 gem 'unicorn'
 gem 'redcarpet'
 gem 'faker'
-
 gem 'ransack'
+gem 'google-analytics-rails'
 
 gem 'therubyracer', platforms: :ruby
 

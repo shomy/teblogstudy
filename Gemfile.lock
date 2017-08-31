@@ -272,6 +272,7 @@ GEM
     formatador (0.2.5)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
+    google-analytics-rails (1.1.1)
     haml (5.0.2)
       temple (>= 0.8.0)
       tilt
@@ -557,6 +558,7 @@ DEPENDENCIES
   fog
   font-awesome-rails
   font-awesome-sass
+  google-analytics-rails
   jbuilder (~> 2.5)
   jquery-rails
   jquery-turbolinks
