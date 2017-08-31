@@ -99,5 +99,6 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   GA.tracker = "UA-105684297-1"
+  GA.script_source = :doubleclick
 
 end

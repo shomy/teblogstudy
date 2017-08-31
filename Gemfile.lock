@@ -558,7 +558,7 @@ DEPENDENCIES
   fog
   font-awesome-rails
   font-awesome-sass
-  google-analytics-rails
+  google-analytics-rails (= 1.1.1)
   jbuilder (~> 2.5)
   jquery-rails
   jquery-turbolinks

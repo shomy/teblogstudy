@@ -36,7 +36,7 @@ gem 'unicorn'
 gem 'redcarpet'
 gem 'faker'
 gem 'ransack'
-gem 'google-analytics-rails'
+gem 'google-analytics-rails', '1.1.1'
 
 gem 'therubyracer', platforms: :ruby
 
