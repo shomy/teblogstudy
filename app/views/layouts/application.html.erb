@@ -8,12 +8,22 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= analytics_init if GoogleAnalytics.valid_tracker? %>
+    <meta name="keywords" content="プログラミング初心者,techblog">
+    <meta name="description" content="プログラミング初心者によるtechblog">
+
   </head>
   <body>
     <%= render'layouts/navbar' %>
       <br>
+        <% unless flash.empty? %>
+          <script type="text/javascript">
+            <% flash.each do |f| %>
+              <% type = f[0].to_s.gsub('alert','error').gsub('notice','info') %>
+                toastr['<%=type %>']('<%=f[1] %>');
+            <% end %>
+          </script>
+        <% end %>
       <%= yield %>
-      <p class="flash"><%= notice %><%= alert %></p>
       <div id="page-top-btn" class="page-top-btn">
         <p><a class="move-page-top" id="move-page-top">▲</a></p>
       </div>

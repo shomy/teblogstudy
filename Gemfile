@@ -37,6 +37,8 @@ gem 'redcarpet'
 gem 'faker'
 gem 'ransack'
 gem 'google-analytics-rails', '1.1.1'
+gem 'toastr-rails'
+
 
 gem 'therubyracer', platforms: :ruby
 
