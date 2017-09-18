@@ -1,0 +1,17 @@
+<div id="iinefollow_form_<%= blog.id %>">
+  <% unless Iine.find_by(user_id: current_user.id, blog_id: blog.id).present? %>
+    <%= form_for(blog.iines.build(user_id: current_user.id, blog_id: blog.id), url: iines_path, remote: true) do |f|%>
+      <%= f.hidden_field :user_id %>
+      <%= f.hidden_field :blog_id %>
+      <%= f.submit "いいね", class: "btn btn-success btn-sm" %>
+      【いいね数：<%= iine_count(blog.id) %>】
+    <% end %>
+  <% else %>
+    <%= form_for(Iine.find_by(user_id: current_user.id, blog_id: blog.id), url: iine_path(Iine.find_by(user_id: current_user.id, blog_id: blog.id)), method: :delete, remote: true) do |f|%>
+      <%= f.hidden_field :user_id %>
+      <%= f.hidden_field :blog_id %>
+      <%= f.submit "いいねを取り消す", class: "btn btn-default btn-sm" %>
+      【いいね数：<%= iine_count(blog.id) %>】
+    <% end %>
+  <% end %>
+</div>

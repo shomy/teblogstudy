@@ -4,17 +4,17 @@ class IinesController < ApplicationController
 
   def create
     @iine = Iine.new(iine_params)
-      respond_to do |format|
-        if @iine.save
-          respond_with @iine
-        end
+    @blog = Blog.find(@iine.blog_id)
+      if @iine.save
+        respond_with @blog
       end
   end
 
   def destroy
     @iine = Iine.find(params[:id])
+    @blog = Blog.find(@iine.blog_id)
     if @iine.destroy
-       respond_with @iine
+       respond_with @blog
     end
   end
 
