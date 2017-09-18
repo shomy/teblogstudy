@@ -15,6 +15,9 @@ class User < ApplicationRecord
   has_many :reverse_relationships, foreign_key: "followed_id",class_name: "Relationship", dependent: :destroy
   has_many :followers, through: :reverse_relationships, source: :follower
 
+  has_many :iines, dependent: :destroy
+  has_many :blogs, through: :iines
+
 
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
     user = User.find_by(provider: auth.provider, uid: auth.uid)

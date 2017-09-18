@@ -6,12 +6,14 @@
   <%= f.search_field :title_or_content_cont ,class: "form-control",placeholder: "キーワードを入力してください"%>
   <%= f.submit :class=>"form-control "%>
 <% end %>
-    <p><%= notice %></p>
     <h1>ブログ一覧 </h1>
     <% @blogs.each do |blog| %>
       <div class="row">
         <!-- # ブログのタイトルにlink_toでリンクを設定します。 -->
-          <p><%== markdown(blog.content) %></p><hr><hr>
+          <p><%== markdown(blog.content) %></p>
+          <hr>
+            <%= render partial: 'iines/form',locals: { blog: blog} %>
+          <hr>
       </div>
     <% end %>
   </div>

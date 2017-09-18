@@ -9,6 +9,12 @@ module ApplicationHelper
     end
     image_tag(img_url, alt: user.name)
   end
+
+
+  def iine_count(aa)
+    Iine.where(blog_id:aa).count
+  end
+
 end
 
 
