@@ -50,7 +50,7 @@
       <% end %>
       <p><%= notice %></p>
       <h3>最新技術ブログ ３回分</h3><hr>
-      <% @blogs.last(3).each do |blog| %>
+      <% @blogs.first(3).each do |blog| %>
         <div class="row">
           <!-- # ブログのタイトルにlink_toでリンクを設定します。 -->
             <p><%== markdown(blog.content) %></p>
