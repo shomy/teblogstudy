@@ -11,7 +11,15 @@
     <%= analytics_init if GoogleAnalytics.valid_tracker? %>
     <meta name="keywords" content="プログラミング初心者,techblog">
     <meta name="description" content="プログラミング初心者によるtechblog">
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-105684297-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
 
+  gtag('config', 'UA-105684297-1');
+</script>
   </head>
   <body>
     <%= render'layouts/navbar' %>
